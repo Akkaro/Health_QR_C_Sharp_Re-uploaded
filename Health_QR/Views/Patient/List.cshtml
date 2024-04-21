@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Health_QR.Models.Patient>
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.QR_File)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PatientId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Last_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medical_History)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Current_And_Past_Medications)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Medication_Food_And_Other_Allergies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Past_Medical_History)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Past_Surgical_History)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Family_History)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Social_History)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UniquePatientId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    <img src= @item.QR_File alt="QR">
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PatientId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.First_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medical_History)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Current_And_Past_Medications)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Medication_Food_And_Other_Allergies)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Past_Medical_History)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Past_Surgical_History)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Family_History)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Social_History)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UniquePatientId)
+            </td>
+            <td>
+                    @Html.ActionLink("Update", "Update", new {  id = @item.UniquePatientId  }, null) |
+                    @Html.ActionLink("Delete", "Delete", new {  id = @item.UniquePatientId  }, null) |
+                    @Html.ActionLink("Details", "Details", new {  id = @item.UniquePatientId  }, null) |
+                    
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

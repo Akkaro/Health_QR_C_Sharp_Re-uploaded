@@ -1,0 +1,85 @@
+﻿@model Health_QR.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PatientId)
+        </dt> &nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PatientId)
+        </dd> &nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.First_Name)
+        </dt> &nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.First_Name)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Last_Name)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Medical_History)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Medical_History)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Current_And_Past_Medications)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Current_And_Past_Medications)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Medication_Food_And_Other_Allergies)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Medication_Food_And_Other_Allergies)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Past_Medical_History)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Past_Medical_History)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Past_Surgical_History)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Past_Surgical_History)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Family_History)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Family_History)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Social_History)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Social_History)
+        </dd>&nbsp;
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UniquePatientId)
+        </dt>&nbsp;
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UniquePatientId)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="List">Back to List</a>
+</div>

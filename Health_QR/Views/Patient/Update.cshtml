@@ -1,0 +1,74 @@
+﻿@model Health_QR.Models.Patient
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Update</h1>
+
+<h4>Patient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="First_Name" class="control-label"></label>
+                <input asp-for="First_Name" class="form-control" />
+                <span asp-validation-for="First_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Last_Name" class="control-label"></label>
+                <input asp-for="Last_Name" class="form-control" />
+                <span asp-validation-for="Last_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Current_And_Past_Medications" class="control-label"></label>
+                <input asp-for="Current_And_Past_Medications" class="form-control" />
+                <span asp-validation-for="Current_And_Past_Medications" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medication_Food_And_Other_Allergies" class="control-label"></label>
+                <input asp-for="Medication_Food_And_Other_Allergies" class="form-control" />
+                <span asp-validation-for="Medication_Food_And_Other_Allergies" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Past_Medical_History" class="control-label"></label>
+                <input asp-for="Past_Medical_History" class="form-control" />
+                <span asp-validation-for="Past_Medical_History" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Past_Surgical_History" class="control-label"></label>
+                <input asp-for="Past_Surgical_History" class="form-control" />
+                <span asp-validation-for="Past_Surgical_History" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Family_History" class="control-label"></label>
+                <input asp-for="Family_History" class="form-control" />
+                <span asp-validation-for="Family_History" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Social_History" class="control-label"></label>
+                <input asp-for="Social_History" class="form-control" />
+                <span asp-validation-for="Social_History" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UniquePatientId" class="control-label"></label>
+                <input asp-for="UniquePatientId" class="form-control" />
+                <span asp-validation-for="UniquePatientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
